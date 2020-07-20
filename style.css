@@ -1,0 +1,119 @@
+body {
+  background-color: #3e434b;
+}
+
+body img:not(.shop) {
+  width: 40px;
+  height: 35px;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 0 auto;
+}
+/* logo */
+.logo {
+  margin-top: 50px;
+  /* background-color: lightblue; */
+}
+
+/* nav */
+.nav {
+  display: flex;
+}
+
+.nav > ul {
+  /* background-color: lightgoldenrodyellow; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0px;
+  width: 300px;
+}
+.nav > ul > li {
+  display: flex;
+}
+
+.nav > ul > li > img {
+  cursor: pointer;
+}
+
+.nav > ul > li > a {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: black;
+  background-color: yellowgreen;
+  font-size: small;
+  border-radius: 5%;
+}
+.nav > ul > li > .blue {
+  background-color: #54aef0;
+}
+.nav > ul > li > .yellow {
+  background-color: #fbbf23;
+}
+
+.nav > ul > li > .pink {
+  background-color: #fd7e82;
+}
+
+/* list */
+.list {
+  overflow: scroll;
+  /* background-color: burlywood; */
+  height: 500px;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+.list::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.list::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: gray;
+}
+.list::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+.list::-webkit-scrollbar-corner {
+  background-color: #3e434b; /* 우측 하단의 코너 부분 */
+}
+
+.list > ul {
+  padding-left: 0px;
+  width: 300px;
+}
+
+.list > ul > li {
+  margin-bottom: 3px;
+  height: 43px;
+}
+.list > ul > li div {
+  background-color: whitesmoke;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+}
+
+.list > ul > li img {
+  padding: 3px 10px;
+}
+
+.list > ul > li p {
+  margin: 0px;
+}
