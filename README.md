@@ -1,1 +1,1 @@
-# ita.js.minishop
+# 온라인 쇼핑몰 미니게임
