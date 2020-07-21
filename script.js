@@ -9,6 +9,10 @@ function clearAll() {
   }
 }
 
+function getClothes() {
+  let;
+}
+
 class Nav {
   constructor(elem) {
     this._elem = elem;
