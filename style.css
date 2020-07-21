@@ -18,34 +18,39 @@ ul {
   height: auto;
   margin: 0 auto;
 }
-/* logo */
+/* --------------------logo */
 .logo {
   margin-top: 50px;
   /* background-color: lightblue; */
 }
 
-/* nav */
+/* -----------nav---------- */
 .nav {
   display: flex;
 }
-
 .nav > ul {
   /* background-color: lightgoldenrodyellow; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-left: 0px;
-  width: 300px;
+  width: 330px;
 }
 .nav > ul > li {
   display: flex;
+  align-items: center;
+  height: 40px;
 }
-
 .nav > ul > li > img {
   cursor: pointer;
+  margin: 0px 5px;
 }
-
+.nav > ul > li > img:hover {
+  width: 47px;
+  height: 42px;
+  margin: 0 1.5px;
+}
 .nav > ul > li > a {
   display: inline-block;
   text-decoration: none;
@@ -57,6 +62,15 @@ ul {
   background-color: yellowgreen;
   font-size: small;
   border-radius: 5%;
+  margin: 0px 5px;
+}
+.nav > ul > li > a:hover {
+  width: 60px;
+  height: 40px;
+  font-weight: bold;
+  margin: 0 0px;
+  cursor: pointer;
+  font-size: 1em;
 }
 .nav > ul > li > .blue {
   background-color: #54aef0;
@@ -64,18 +78,39 @@ ul {
 .nav > ul > li > .yellow {
   background-color: #fbbf23;
 }
-
 .nav > ul > li > .pink {
   background-color: #fd7e82;
 }
+/* /nav  */
 
-/* list */
+/* -------------------list */
 .list {
   overflow: scroll;
-  /* background-color: burlywood; */
   height: 500px;
 }
+.list > ul {
+  padding-left: 0px;
+  width: 300px;
+}
+.list > ul > li {
+  margin-bottom: 3px;
+  height: 43px;
+  /* display: none; */
+}
+.list > ul > li div {
+  background-color: whitesmoke;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+}
+.list > ul > li img {
+  padding: 3px 10px;
+}
+.list > ul > li p {
+  margin: 0px;
+}
 
+/*list > Scroll Bar */
 .list::-webkit-scrollbar {
   width: 6px;
 }
@@ -93,27 +128,4 @@ ul {
 .list::-webkit-scrollbar-corner {
   background-color: #3e434b; /* 우측 하단의 코너 부분 */
 }
-
-.list > ul {
-  padding-left: 0px;
-  width: 300px;
-}
-
-.list > ul > li {
-  margin-bottom: 3px;
-  height: 43px;
-}
-.list > ul > li div {
-  background-color: whitesmoke;
-  border-radius: 2%;
-  display: flex;
-  align-items: center;
-}
-
-.list > ul > li img {
-  padding: 3px 10px;
-}
-
-.list > ul > li p {
-  margin: 0px;
-}
+/* /list */
