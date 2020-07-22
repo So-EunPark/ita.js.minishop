@@ -1,5 +1,105 @@
 "use strict";
 
+function makeClothes(category, color, gender, size) {
+  return {
+    category,
+    color,
+    gender,
+    size,
+  };
+}
+
+let clothes0 = makeClothes("shirts", "blue", "female", "large");
+let clothes1 = makeClothes("skirt", "pink", "female", "small");
+let clothes2 = makeClothes("pants", "pink", "male", "medium");
+let clothes3 = makeClothes("pants", "pink", "male", "small");
+let clothes4 = makeClothes("skirt", "blue", "female", "medium");
+let clothes5 = makeClothes("shirts", "yellow", "male", "medium");
+let clothes6 = makeClothes("pants", "blue", "male", "large");
+let clothes7 = makeClothes("pants", "yellow", "male", "large");
+let clothes8 = makeClothes("skirt", "yellow", "female", "small");
+let clothes9 = makeClothes("skirt", "blue", "female", "medium");
+let clothes10 = makeClothes("pants", "yellow", "female", "small");
+let clothes11 = makeClothes("shirts", "yellow", "male", "large");
+let clothes12 = makeClothes("skirt", "yellow", "female", "medium");
+let clothes13 = makeClothes("pants", "blue", "male", "medium");
+let clothes14 = makeClothes("shirts", "pink", "female", "small");
+
+let clothesArray = new Array();
+
+clothesArray[0] = clothes0;
+clothesArray[1] = clothes1;
+clothesArray[2] = clothes2;
+clothesArray[3] = clothes3;
+clothesArray[4] = clothes4;
+clothesArray[5] = clothes5;
+clothesArray[6] = clothes6;
+clothesArray[7] = clothes7;
+clothesArray[8] = clothes8;
+clothesArray[9] = clothes9;
+clothesArray[10] = clothes10;
+clothesArray[11] = clothes11;
+clothesArray[12] = clothes12;
+clothesArray[13] = clothes13;
+clothesArray[14] = clothes14;
+
+function addClothesList() {
+  for (let array in clothesArray) {
+    let list = document.querySelector(".list>ul");
+
+    let clothesList = document.createElement("li");
+    list.append(clothesList);
+
+    let clothesDiv = document.createElement("div");
+    clothesList.append(clothesDiv);
+
+    let clothesImg = document.createElement("img");
+    let clothesP = document.createElement("p");
+    clothesDiv.append(clothesImg);
+    clothesDiv.append(clothesP);
+
+    clothesImg.classList.add(
+      "clothes",
+      clothesArray[array].category,
+      clothesArray[array].color
+    );
+
+    clothesP.innerHTML =
+      clothesArray[array].gender + ", " + clothesArray[array].size + " size";
+
+    if (clothesImg.classList.contains("shirts")) {
+      if (clothesImg.classList.contains("blue")) {
+        clothesImg.setAttribute("src", "imgs/blue_t.png");
+      } else if (clothesImg.classList.contains("yellow")) {
+        clothesImg.setAttribute("src", "imgs/yellow_t.png");
+      } else {
+        clothesImg.setAttribute("src", "imgs/pink_t.png");
+      }
+    }
+
+    if (clothesImg.classList.contains("pants")) {
+      if (clothesImg.classList.contains("blue")) {
+        clothesImg.setAttribute("src", "imgs/blue_p.png");
+      } else if (clothesImg.classList.contains("yellow")) {
+        clothesImg.setAttribute("src", "imgs/yellow_p.png");
+      } else {
+        clothesImg.setAttribute("src", "imgs/pink_p.png");
+      }
+    }
+
+    if (clothesImg.classList.contains("skirt")) {
+      if (clothesImg.classList.contains("blue")) {
+        clothesImg.setAttribute("src", "imgs/blue_s.png");
+      } else if (clothesImg.classList.contains("yellow")) {
+        clothesImg.setAttribute("src", "imgs/yellow_s.png");
+      } else {
+        clothesImg.setAttribute("src", "imgs/pink_s.png");
+      }
+    }
+  }
+}
+addClothesList();
+
 let nav = document.querySelector(".nav");
 let list = document.querySelector(".list");
 
@@ -7,10 +107,6 @@ function clearAll() {
   for (let i = 0; i < list.querySelectorAll("li").length; i++) {
     list.querySelectorAll("li")[i].style.display = "none";
   }
-}
-
-function getClothes() {
-  let;
 }
 
 class Nav {
@@ -64,9 +160,15 @@ class Nav {
     if (action) {
       clearAll();
       this[action]();
-      console.log(action);
     }
   }
 }
+
+let main = document.querySelector(".shop");
+main.addEventListener("click", () => {
+  for (let i = 0; i < list.querySelectorAll("li").length; i++) {
+    list.querySelectorAll("li")[i].style.display = "block";
+  }
+});
 
 new Nav(nav);

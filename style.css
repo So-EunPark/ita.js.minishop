@@ -23,6 +23,9 @@ ul {
   margin-top: 50px;
   /* background-color: lightblue; */
 }
+.logo > .shop {
+  cursor: pointer;
+}
 
 /* -----------nav---------- */
 .nav {
@@ -105,6 +108,9 @@ ul {
 .list > ul > li img {
   padding: 3px 10px;
 }
+/* .list > ul > img .pink .pants{
+
+} */
 .list > ul > li p {
   margin: 0px;
 }
